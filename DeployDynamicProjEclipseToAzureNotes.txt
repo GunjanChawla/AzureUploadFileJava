@@ -1,0 +1,15 @@
+ ---------- Deploy From Eclipse to Azure ---------------
+
+1) Create a Dynamic Web Application
+
+2) Create a hello.html page in WebContent
+
+3) Install Dependency of Azure in your eclipse using:
+	https://dl.microsoft.com/eclipse
+
+4) Right click and select Azure -> Publish as Azure web app
+ 5) Your Project is deployed on Home portal .azure -> App Services
+e.g. https://webapp-180412134850.azurewebsites.net/hello.html
+
+sucessfully deployed!
+
