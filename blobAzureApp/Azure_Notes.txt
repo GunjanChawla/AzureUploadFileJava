@@ -1,5 +1,10 @@
 AZURE NOTES
 
+* Install Dependency of Azure in your eclipse using:
+	https://dl.microsoft.com/eclipse
+  
+* functions.azure.com :: For testing..Trail given for 1 year
+
 https://docs.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-java
 
 https://github.com/Azure-Samples/storage-blob-java-getting-started/blob/master/src/BlobBasics.java
