@@ -1,0 +1,48 @@
+--- AZURE: Create a Function App ---
+
+Go to Home page of portal.azure.com / function.azure.com
+
+Click on +Create a resource
+Select Function App
+Create Function App e.g: FunctionAppCheck
+Language supported: C#, Javascript, Java
+Click on + icon on Functions -> Get started quickly with a premade function: Choose scenario 1) Webhook/API 2) Timer 3) Data processing
+Http Trigger: You have Get function URL
+Timer Trigger: Do not have URL, you can see in logs
+
+Http Tigger Code: Means function that will run whenever it receives HTTP request based on body or query string
+module.exports = function (context, req) {
+    context.log('JavaScript HTTP trigger function processed a request.');
+
+    if (req.query.name || (req.body && req.body.name)) {
+        context.res = {
+            // status: 200, /* Defaults to 200 */
+            body: "Hello " + (req.query.name || req.body.name)
+        };
+    }
+    else {
+        context.res = {
+            status: 400,
+            body: "Please pass a name on the query string or in the request body"
+        };
+    }
+    context.done();
+};
+https://functionappcheck.azurewebsites.net/api/HttpTriggerJS1?code=sReklN9BwJZfxqHhtY3TGijsqZ5aTduE0RR9KtNAz5VMIUMP4o02zA==&name=gunjan4
+
+Timer Trigger function: Means that will be run on specific schedule
+module.exports = function (context, myTimer) {
+    var timeStamp = new Date().toISOString();
+    
+    if(myTimer.isPastDue)
+    {
+        context.log('JavaScript is running late!');
+    }
+    context.log('JavaScript timer trigger function ran!', timeStamp);   
+    
+    context.done();
+};
+
+
+ 
+
