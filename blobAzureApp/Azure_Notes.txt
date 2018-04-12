@@ -1,0 +1,9 @@
+AZURE NOTES
+
+https://docs.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-java
+
+https://github.com/Azure-Samples/storage-blob-java-getting-started/blob/master/src/BlobBasics.java
+https://github.com/Azure/azure-storage-java/issues/106
+
+https://stackoverflow.com/questions/20103258/accessing-azure-blob-storage-using-bash-curl
+
